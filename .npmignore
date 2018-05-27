@@ -4,9 +4,11 @@
 .git
 .hg
 .npmrc
-node_modules
-semantic-ui
 dist/components
 dist/themes
 dist/semantic.*
 dist/semantic.min.*
+node_modules/
+semantic-ui/
+test/
+gulpfile.js
