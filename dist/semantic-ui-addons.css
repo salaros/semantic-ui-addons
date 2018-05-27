@@ -1,4 +1,27 @@
 
+/* Sticky footer */
+body.pushable > .pusher > .full.height {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+body.pushable > .pusher > .full.height > main,
+body.pushable > .pusher > .full.height > .main.grid {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+body.pushable > .pusher > .full.height > footer,
+body.pushable > .pusher > .full.height > .footer.segment {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
 .ui.text.aligned.center {
   text-align: center;
 }
@@ -25,6 +48,20 @@
 .ui.card > .content.very.padded {
   /* Allow very padded cards */
   padding: 2em !important;
+}
+.ui.display.none {
+  display: none !important;
+}
+.ui.display.block {
+  display: block !important;
+}
+.ui.display.inline.block {
+  display: inline-block !important;
+}
+.ui.display.flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 [class*="full height"] {
   min-height: 100%;
