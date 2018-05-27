@@ -1,0 +1,40 @@
+.ui {
+    &.menu {
+        /* Remove useless border from transparent menues */
+        border: none !important;
+        border-color: transparent !important;
+    }
+
+    &.cards > .card.column,
+    &.card.column {
+        /* Allow column cards to be displayed correctly */
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+/* Mobile */
+
+@media only screen and (max-width: (@tabletBreakpoint - 1)) {
+	.ui {
+        &.label {
+            >.detail {
+                /* Make label details look more compact on mobile */
+                margin-left: 0.2em;
+            }
+        }
+
+        &.two.doubling.cards > .card {
+            /* Fixed doubling cards not being centered on some mobile devices */
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+	.field {
+		>textarea {
+			/* Fix text area fields on mobile */
+			width: 100%;
+		}
+	}
+}

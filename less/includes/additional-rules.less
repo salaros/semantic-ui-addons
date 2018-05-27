@@ -1,0 +1,50 @@
+.ui {
+    &.text {
+        &.aligned {
+            &.center {
+                text-align: center
+            }
+            &.left {
+                text-align: left
+            }
+            &.right {
+                text-align: right
+            }
+            &.justified {
+                text-align: justify;
+            }
+        }
+    }
+
+    &.vertical.stripe {
+        padding: 3em 0;
+        border-bottom: 1px solid rgba(34, 36, 38, .15);
+        &.very.padded {
+            padding: 8em 0;
+        }
+    }
+
+    &.center.aligned {
+        margin: auto
+    }
+
+    &.cards > .card,
+    &.card {
+        & > .content.very.padded {
+            /* Allow very padded cards */
+            padding: 2em !important;
+        }
+    }
+}
+
+[class*="full height"] {
+    min-height: 100%;
+}
+
+[class*="left floated"] {
+    float: left;
+}
+
+[class*="right floated"] {
+    float: right;
+}

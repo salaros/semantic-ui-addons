@@ -12,6 +12,8 @@ var gulp = require('gulp'),
 var tasks = require('./semantic-ui/tasks/config/tasks.js'),
     settings = tasks.settings;
 
+gulp.task('default', ['less:compile']);
+
 gulp.task('less:compile', function () {
   var stream = gulp.src('./less/*.less')
     .pipe(plumber(settings.plumber.less))
