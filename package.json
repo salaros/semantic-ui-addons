@@ -9,11 +9,13 @@
     "email": "salaros@salaros.com",
     "url": "http://salaros.com/"
   },
-  "dependencies": {
-    "semantic-ui": "^2.3.1"
-  },
-  "main": "src/node",
-  "scripts": {
-    "test": " ./node_modules/mocha/bin/mocha"
+  "devDependencies": {
+    "semantic-ui": "^2.3.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-flatten": "^0.4.0",
+    "gulp-less": "^3.5.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-replace": "^1.0.0"
   }
 }
