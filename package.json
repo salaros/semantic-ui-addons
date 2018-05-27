@@ -1,0 +1,19 @@
+{
+  "name": "semantic-ui-addons",
+  "description": "Semantic UI with some addons and fixes",
+  "homepage": "https://github.com/salaros/semantic-ui-addons",
+  "version": "2.3.1",
+  "license": "MIT",
+  "author": {
+    "name": "Zhmayev Yaroslav aka Salaros",
+    "email": "salaros@salaros.com",
+    "url": "http://salaros.com/"
+  },
+  "dependencies": {
+    "semantic-ui": "^2.3.1"
+  },
+  "main": "src/node",
+  "scripts": {
+    "test": " ./node_modules/mocha/bin/mocha"
+  }
+}
