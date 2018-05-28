@@ -67,7 +67,7 @@ body.pushable > .pusher.flex > .full.height > .footer.segment {
   margin: 0 !important;
 }
 .ui.paddingless {
-  margin: 0 !important;
+  padding: 0 !important;
 }
 [class*="full height"] {
   min-height: 100%;
