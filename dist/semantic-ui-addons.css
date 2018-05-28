@@ -1,6 +1,6 @@
 
-/* Sticky footer */
-body.pushable > .pusher > .full.height {
+/* Sticky footer with Flexbox */
+body.pushable > .pusher.flex > .full.height {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,14 +10,14 @@ body.pushable > .pusher > .full.height {
           flex-direction: column;
   min-height: 100vh;
 }
-body.pushable > .pusher > .full.height > main,
-body.pushable > .pusher > .full.height > .main.grid {
+body.pushable > .pusher.flex > .full.height > main,
+body.pushable > .pusher.flex > .full.height > .main.grid {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
-body.pushable > .pusher > .full.height > footer,
-body.pushable > .pusher > .full.height > .footer.segment {
+body.pushable > .pusher.flex > .full.height > footer,
+body.pushable > .pusher.flex > .full.height > .footer.segment {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
@@ -62,6 +62,12 @@ body.pushable > .pusher > .full.height > .footer.segment {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
+}
+.ui.marginless {
+  margin: 0 !important;
+}
+.ui.paddingless {
+  margin: 0 !important;
 }
 [class*="full height"] {
   min-height: 100%;
