@@ -1,0 +1,13 @@
+{
+    // Exclude files from File Explorer
+    "files.exclude": {
+        "**/*.bak*"                         : true,
+        "node_modules"                      : true,
+        "semantic-ui/[^sr]*"                : true,
+        "semantic-ui/*/[^si]*"              : true,
+        "semantic-ui/*/*/[^glo]*"           : true,
+        ".vscode/chrome"                    : true,
+    },
+    // Adding support for Live Server
+    "liveServer.settings.NoBrowser"         : true
+}
