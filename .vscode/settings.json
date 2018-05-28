@@ -3,6 +3,8 @@
     "files.exclude": {
         "**/*.bak*"                         : true,
         "node_modules"                      : true,
+        "dist/components"                   : true,
+        "dist/themes"                       : true,
         "semantic-ui/[^sr]*"                : true,
         "semantic-ui/*/[^si]*"              : true,
         "semantic-ui/*/*/[^glo]*"           : true,
