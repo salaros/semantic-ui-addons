@@ -12,8 +12,24 @@ var gulp = require('gulp'),
 var tasks = require('./semantic-ui/tasks/config/tasks.js'),
     settings = tasks.settings;
 
-gulp.task('default', ['less:compile']);
+// Default task
+gulp.task('default', ['less:compile', 'semantic-ui:build']);
 
+// Build Semantic UI assets
+gulp.task('semantic-ui:build', function () {
+    var exec = require('child_process').exec;
+
+    // Run the dependency gulp file first
+    exec('gulp --gulpfile ./semantic-ui/gulpfile.js build', function(error, stdout, stderr) {
+        console.log('semantic-ui/gulpfile.js:');
+        console.log(stdout);
+        if(error) {
+            console.log(error, stderr);
+        }
+    });
+});
+
+// LESS compilation
 gulp.task('less:compile', function () {
   var stream = gulp.src('./less/*.less')
     .pipe(plumber(settings.plumber.less))
@@ -31,4 +47,9 @@ gulp.task('less:compile', function () {
         addComment: false
     }))
     .pipe(gulp.dest('./dist/'));
+});
+
+// Watch task for LESS compilation
+gulp.task("watch", function () {
+    gulp.watch("./less/**/*.less", ["less:compile"]);
 });
