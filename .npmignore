@@ -6,14 +6,11 @@ Thumbs.db
 
 # Folders
 build
-assets
 test
 coverage
 vendor
-dist/components
-dist/themes
-dist/semantic.*
-dist/semantic.min.*
+dist/semantic.*css
+dist/semantic.min.*.css
 node_modules
 semantic-ui
 
