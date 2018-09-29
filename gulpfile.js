@@ -17,7 +17,7 @@ var tasks = require('./semantic-ui/tasks/config/tasks.js'),
 // Default task
 gulp.task('default', [ 'css:concat' ]);
 
-gulp.task('css:concat', [ 'semantic-ui:build', 'less:compile' ], function () {
+gulp.task('css:concat', [ 'semantic-ui:build', 'less:compile', 'fonts:copy' ], function () {
     gulp.src([
             './node_modules/lato-font/css/lato-font.css',
             './dist/semantic.css',
@@ -34,6 +34,12 @@ gulp.task('css:concat', [ 'semantic-ui:build', 'less:compile' ], function () {
             addComment: false
         }))
         .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('fonts:copy', function (cb) {
+    return gulp.src('node_modules/lato-font/fonts/**/*')
+                .pipe(gulp.dest('./fonts/'));
+
 });
 
 // Build Semantic UI assets
