@@ -11,7 +11,7 @@ var tasks = require('./semantic-ui/tasks/config/tasks.js'),
 // Default task
 gulp.task('default', [ 'css:concat' ]);
 
-gulp.task('css:concat', [ 'semantic-ui:build', 'fonts:copy' ], function () {
+gulp.task('css:concat', [ 'semantic-ui:install', 'semantic-ui:build', 'fonts:copy' ], function () {
     gulp.src([
             './node_modules/lato-font/css/lato-font.css',
             './dist/semantic.css'
@@ -33,6 +33,24 @@ gulp.task('fonts:copy', function (cb) {
     return gulp.src('node_modules/lato-font/fonts/**/*')
                 .pipe(gulp.dest('./fonts/'));
 
+});
+
+// Install Semantic UI assets
+gulp.task('semantic-ui:install', function (cb) {
+
+    // Run the dependency gulp file first
+    return gulp.src('./node_modules/semantic-ui/gulpfile.js')
+        .pipe(exec('gulp --gulpfile <%= file.path %> install', function(err, stdout, stderr) {
+                console.log('semantic-ui/gulpfile.js:');
+                console.log(stdout);
+                cb(err);
+            })
+        )
+        .pipe(exec.reporter({
+            err: true, // default = true, false means don't write err
+            stderr: true, // default = true, false means don't write stderr
+            stdout: true // default = true, false means don't write stdout
+        }));
 });
 
 // Build Semantic UI assets
