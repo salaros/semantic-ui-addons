@@ -7,45 +7,61 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     rename = require('gulp-rename'),
     clone = require('gulp-clone'),
-    cssnano = require('gulp-cssnano');
+    cssnano = require('gulp-cssnano'),
+    concat = require('gulp-concat'),
+    exec = require('gulp-exec');
 
 var tasks = require('./semantic-ui/tasks/config/tasks.js'),
     settings = tasks.settings;
 
 // Default task
-gulp.task('default', ['less:compile', 'semantic-ui:build']);
+gulp.task('default', [ 'css:concat' ]);
+
+gulp.task('css:concat', [ 'semantic-ui:build', 'less:compile' ], function () {
+    gulp.src([
+            './node_modules/lato-font/css/lato-font.css',
+            './dist/semantic.css',
+            './dist/semantic-ui-addons.css'
+        ])
+        .pipe(sourcemaps.init())
+        .pipe(concat('semantic-ui-addons.css'))
+        .pipe(gulp.dest('./dist/'))
+        .pipe(cssnano())
+        .pipe(rename({
+            suffix: ".min",
+        }))
+        .pipe(sourcemaps.write("./", {
+            addComment: false
+        }))
+        .pipe(gulp.dest('./dist/'));
+});
 
 // Build Semantic UI assets
-gulp.task('semantic-ui:build', function () {
-    var exec = require('child_process').exec;
+gulp.task('semantic-ui:build', function (cb) {
 
     // Run the dependency gulp file first
-    exec('gulp --gulpfile ./semantic-ui/gulpfile.js build', function(error, stdout, stderr) {
-        console.log('semantic-ui/gulpfile.js:');
-        console.log(stdout);
-        if(error) {
-            console.log(error, stderr);
-        }
-    });
+    return gulp.src('./semantic-ui/gulpfile.js')
+        .pipe(exec('gulp --gulpfile <%= file.path %> build', function(err, stdout, stderr) {
+                console.log('semantic-ui/gulpfile.js:');
+                console.log(stdout);
+                cb(err);
+            })
+        )
+        .pipe(exec.reporter({
+            err: true, // default = true, false means don't write err
+            stderr: true, // default = true, false means don't write stderr
+            stdout: true // default = true, false means don't write stdout
+        }));
 });
 
 // LESS compilation
 gulp.task('less:compile', function () {
-  var stream = gulp.src('./less/*.less')
+  gulp.src('./less/*.less')
     .pipe(plumber(settings.plumber.less))
-    .pipe(sourcemaps.init())
     .pipe(less(settings.less))
     .pipe(autoprefixer(settings.prefix))
     .pipe(replace(/((.*?)\n)+\/\* Semantic UI Addons \*\//gmi, ''))
     .pipe(flatten())
-    .pipe(gulp.dest('./dist/'))
-    .pipe(cssnano())
-    .pipe(rename({
-        suffix: ".min",
-    }))
-    .pipe(sourcemaps.write("./", {
-        addComment: false
-    }))
     .pipe(gulp.dest('./dist/'));
 });
 

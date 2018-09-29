@@ -1,14 +1,39 @@
+# Junk files
+Thumbs.db
 .*.swp
 ._*
 .DS_Store
-.git
-.hg
-.npmrc
+
+# Folders
+build
+assets
+test
+coverage
+vendor
 dist/components
 dist/themes
 dist/semantic.*
 dist/semantic.min.*
-node_modules/
-semantic-ui/
-test/
+node_modules
+semantic-ui
+
+# Dot files
+.git
+.hg
+.npmrc
+.scrutinizer.yml
+.travis.yml
+.gitignore
+.gitattributes
+.npmignore
+.nyc_output
+
+# Files
+*.tgz
+composer.*
 gulpfile.js
+phpunit.xml
+Makefile
+README.md
+CHANGELOG.md
+LICENSE
