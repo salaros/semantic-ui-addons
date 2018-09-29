@@ -2,7 +2,7 @@
   "name": "semantic-ui-addons",
   "description": "Semantic UI with some addons and fixes",
   "homepage": "https://github.com/salaros/semantic-ui-addons",
-  "version": "2.4.4",
+  "version": "2.4.5",
   "license": "MIT",
   "author": {
     "name": "Zhmayev Yaroslav aka Salaros",
@@ -11,16 +11,10 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
     "gulp-exec": "^3.0.2",
-    "gulp-clone": "^2.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.3",
-    "gulp-flatten": "^0.4.0",
-    "gulp-less": "^3.5.0",
-    "gulp-plumber": "^1.2.0",
     "gulp-rename": "^1.4.0",
-    "gulp-replace": "^1.0.0",
     "gulp-sourcemaps": "^2.6.4",
     "semantic-ui": "^2.4.0",
     "lato-font": "^2.0.0"

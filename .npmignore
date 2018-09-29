@@ -5,12 +5,6 @@ Thumbs.db
 .DS_Store
 
 # Folders
-build
-test
-coverage
-vendor
-dist/semantic.*css
-dist/semantic.min.*.css
 node_modules
 semantic-ui
 

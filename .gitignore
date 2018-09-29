@@ -3,6 +3,4 @@ node_modules/
 semantic-ui/
 dist/components/
 dist/themes/
-dist/semantic.*
-dist/semantic.min.*
 package-lock.json

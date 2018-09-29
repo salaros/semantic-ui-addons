@@ -1,3 +1,11 @@
 /*******************************
          Site Overrides
 *******************************/
+
+/*******************************
+        Semantic UI Addons
+*******************************/
+@import '../addons/additional-rules.less';
+@import '../addons/responsive-visibility.less';
+@import '../addons/semantic-ui-fixes.less';
+@import '../addons/text-colored.less';
