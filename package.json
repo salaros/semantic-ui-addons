@@ -18,5 +18,11 @@
     "gulp-sourcemaps": "^2.6.4",
     "semantic-ui": "^2.4.0",
     "lato-font": "^2.0.0"
+  },
+  "peerDependencies": {
+    "gulp-autoprefixer": "*",
+    "gulp-clone": "*",
+    "gulp-flatten": "*",
+    "gulp-replace": "*"
   }
 }
