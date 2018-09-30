@@ -1,4 +1,29 @@
 /*******************************
      User Global Variables
 *******************************/
+
+/******************************
+    Disable built-in Lato font
+/******************************/
 @importGoogleFonts: false;
+
+
+/******************************
+    Override basic colors
+/******************************/
+@red            : #E15F41;
+@orange         : #FF793F;
+@yellow         : #EAB543;
+@olive          : #556B2F;
+@green          : #016936;
+@teal           : #006266;
+@blue           : #227093;
+@violet         : #B33771;
+@purple         : #C44569;
+@pink           : #FF7675;
+@brown          : #B33939;
+@grey           : #84817A;
+@black          : #272727;
+
+@primaryColor   : @teal;
+@secondaryColor : @black;
