@@ -1,0 +1,32 @@
+{
+    "name"              : "salaros/semantic-ui-addons",
+    "license"           : "MIT",
+    "description"       : "Semantic UI with some addons and fixes",
+    "homepage"          : "https://github.com/salaros/semantic-ui-addons",
+    "type"              : "library",
+    "keywords": [
+        "semantic",
+        "ui",
+        "semantic-ui",
+        "addon",
+        "add-on",
+        "addons",
+        "add-ons",
+        "fixes",
+        "improvements"
+    ],
+    "authors": [
+        {
+            "name"      : "Zhmayev Yaroslav",
+            "email"     : "salaros@salaros.com",
+            "homepage"  : "http://salaros.com",
+            "role"      : "Developer"
+        }
+    ],
+    
+    "scripts": {
+        "build": [
+            "make"
+        ]
+    }
+}
