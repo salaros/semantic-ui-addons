@@ -1,0 +1,38 @@
+{
+    "name"          : "semantic-ui-addons",
+    "description"   : "Semantic UI with some addons and fixes",
+    "homepage"      : "http://www.semantic-ui.com",
+    "author": {
+        "name"  : "Zhmayev Yaroslav aka Salaros",
+        "web"   : "http://salaros.com/"
+    },
+    "dependencies": {
+      "jquery"      : ">=1.8"
+    },
+    "main": [
+      "dist/semantic.css",
+      "dist/semantic.js"
+    ],
+    "keywords": [
+        "semantic",
+        "ui",
+        "semantic-ui",
+        "addon",
+        "add-on",
+        "addons",
+        "add-ons",
+        "fixes",
+        "improvements"
+    ],
+    "license" : "MIT",
+    "ignore": [
+      ".vscode",
+      ".npmignore",
+      "addons",
+      "semantic.json",
+      "semantic-ui",
+      "package.json",
+      "package-lock.json",
+      "yarn.lock"
+    ]
+  }
