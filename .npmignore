@@ -12,7 +12,6 @@ semantic-ui
 .git
 .hg
 .npmrc
-.scrutinizer.yml
 .travis.yml
 .gitignore
 .gitattributes
@@ -23,6 +22,7 @@ semantic-ui
 *.tgz
 composer.*
 gulpfile.js
+Makefile
 phpunit.xml
 Makefile
 README.md
