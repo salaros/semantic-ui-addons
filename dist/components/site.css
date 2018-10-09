@@ -207,57 +207,20 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
         Semantic UI Addons
 *******************************/
 
-
-/* Sticky footer with Flexbox */
-body.pushable > .pusher.flex > .full.height {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: 100vh;
-}
-body.pushable > .pusher.flex > .full.height > main,
-body.pushable > .pusher.flex > .full.height > .main.grid {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
-body.pushable > .pusher.flex > .full.height > footer,
-body.pushable > .pusher.flex > .full.height > .footer.segment {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-}
-.ui.text.aligned.center {
-  text-align: center;
-}
-.ui.text.aligned.left {
-  text-align: left;
-}
-.ui.text.aligned.right {
-  text-align: right;
-}
-.ui.text.aligned.justified {
-  text-align: justify;
-}
-.ui.vertical.stripe {
-  padding: 3em 0;
-  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
-}
-.ui.vertical.stripe.very.padded {
-  padding: 8em 0;
-}
-.ui.center.aligned {
+.ui.aligned .center {
   margin: auto;
 }
-.ui.cards > .card > .content.very.padded,
-.ui.card > .content.very.padded {
-  
-/* Allow very padded cards */
-  padding: 2em !important;
+.ui.aligned.text.center {
+  text-align: center;
+}
+.ui.aligned.text.left {
+  text-align: left;
+}
+.ui.aligned.text.right {
+  text-align: right;
+}
+.ui.aligned.text.justified {
+  text-align: justify;
 }
 .ui.display.none {
   display: none !important;
@@ -273,20 +236,166 @@ body.pushable > .pusher.flex > .full.height > .footer.segment {
   display: -ms-flexbox !important;
   display: flex !important;
 }
-.ui.marginless {
-  margin: 0 !important;
-}
-.ui.paddingless {
-  padding: 0 !important;
-}
-[class*="full height"] {
-  min-height: 100%;
-}
 [class*="left floated"] {
   float: left;
 }
 [class*="right floated"] {
   float: right;
+}
+[class*="without right padding"] {
+  padding-right: 0 !important;
+}
+[class*="without left padding"] {
+  padding-left: 0 !important;
+}
+[class*="without top padding"] {
+  padding-top: 0 !important;
+}
+[class*="without bottom padding"] {
+  padding-bottom: 0 !important;
+}
+[class*="paddingless"] {
+  padding: 0 !important;
+}
+[class*="without right margin"] {
+  margin-right: 0 !important;
+}
+[class*="without left margin"] {
+  margin-left: 0 !important;
+}
+[class*="without top margin"] {
+  margin-top: 0 !important;
+}
+[class*="without bottom margin"] {
+  margin-bottom: 0 !important;
+}
+[class*="marginless"] {
+  margin: 0 !important;
+}
+
+/* Colored text */
+.ui.text.brown {
+  color: #B33939;
+}
+.ui.text.violet {
+  color: #B33771;
+}
+.ui.text.olive {
+  color: #556B2F;
+}
+.ui.text.white {
+  color: #FFFFFF;
+}
+.ui.text.grey {
+  color: #84817A;
+}
+.ui.text.black {
+  color: #272727;
+}
+.ui.text.yellow {
+  color: #EAB543;
+}
+.ui.text.teal {
+  color: #006266;
+}
+.ui.text.red {
+  color: #E15F41;
+}
+.ui.text.purple {
+  color: #C44569;
+}
+.ui.text.pink {
+  color: #FF7675;
+}
+.ui.text.orange {
+  color: #FF793F;
+}
+.ui.text.green {
+  color: #016936;
+}
+.ui.text.blue {
+  color: #227093;
+}
+.ui.menu.transparent {
+  
+/* Remove useless border from transparent menues */
+  border: none !important;
+  border-color: transparent !important;
+}
+.ui.segment.borderless {
+  border: none !important;
+}
+.ui.segment.vertical.stripe {
+  padding: 3em 0;
+}
+.ui.segment.vertical.stripe.very.padded {
+  padding: 8em 0;
+}
+.ui.cards > .card > .very.padded.content,
+.ui.card > .very.padded.content {
+  
+/* Allow very padded cards */
+  padding: 2em !important;
+}
+[class*="exactly full height"] {
+  height: 100%;
+}
+[class*="full height or greater"] {
+  min-height: 100%;
+}
+body.pushable > .pusher.flex > .full.height {
+  
+/* Sticky footer via Flexbox */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  
+/* Sticky footer via Flexbox */
+  
+/* Sticky footer via Flexbox */
+}
+body.pushable > .pusher.flex > .full.height > main,
+body.pushable > .pusher.flex > .full.height > .main.grid {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+body.pushable > .pusher.flex > .full.height > footer,
+body.pushable > .pusher.flex > .full.height > .footer.segment {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+body.pushable > .pusher.flex > .full.height [class*="exactly full height"] {
+  height: 100%;
+}
+.ui.cards > .card.column,
+.ui.card.column {
+  
+/* Allow column cards to be displayed correctly */
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+@media only screen and (max-width: 767px) {
+  .ui.two.doubling.cards > .card {
+    
+/* Fixes doubling cards not being centered on some mobile devices */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .field > textarea {
+    
+/* Fix text area fields on mobile */
+    width: 100%;
+  }
+}
+[class*="always hidden"] {
+  display: none !important;
 }
 
 /* Mobile */
@@ -347,72 +456,4 @@ body.pushable > .pusher.flex > .full.height > .footer.segment {
   [class*="widescreen or lower hidden"] {
     display: none !important;
   }
-}
-.ui.menu {
-  
-/* Remove useless border from transparent menues */
-  border: none !important;
-  border-color: transparent !important;
-}
-.ui.cards > .card.column,
-.ui.card.column {
-  
-/* Allow column cards to be displayed correctly */
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-/* Mobile */
-@media only screen and (max-width: 767px) {
-  .ui.label > .detail {
-    
-/* Make label details look more compact on mobile */
-    margin-left: 0.2em;
-  }
-  .ui.two.doubling.cards > .card {
-    
-/* Fixed doubling cards not being centered on some mobile devices */
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .field > textarea {
-    
-/* Fix text area fields on mobile */
-    width: 100%;
-  }
-}
-
-/* Colored text */
-.ui.text.white {
-  color: #FFFFFF;
-}
-.ui.text.grey {
-  color: #84817A;
-}
-.ui.text.black {
-  color: #272727;
-}
-.ui.text.yellow {
-  color: #EAB543;
-}
-.ui.text.teal {
-  color: #006266;
-}
-.ui.text.red {
-  color: #E15F41;
-}
-.ui.text.purple {
-  color: #C44569;
-}
-.ui.text.pink {
-  color: #FF7675;
-}
-.ui.text.orange {
-  color: #FF793F;
-}
-.ui.text.green {
-  color: #016936;
-}
-.ui.text.blue {
-  color: #227093;
 }
