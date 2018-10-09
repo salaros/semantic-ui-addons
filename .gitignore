@@ -1,6 +1,4 @@
 fonts/
 node_modules/
 semantic-ui/
-dist/components/
-dist/themes/
 package-lock.json
