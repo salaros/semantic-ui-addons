@@ -6,8 +6,12 @@
 //
 // see https://github.com/Semantic-Org/Semantic-UI/issues/1114
 
-/* Mobile */
 
+[class*="always hidden"] {
+    display: none !important;
+}
+
+/* Mobile */
 @media only screen and (max-width: (@tabletBreakpoint - 1)) {
     [class*="mobile hidden"],
     [class*="tablet only"]:not(.mobile),
@@ -20,7 +24,6 @@
 }
 
 /* Tablet / iPad Portrait */
-
 @media only screen and (min-width: @tabletBreakpoint) and (max-width: (@computerBreakpoint - 1)) {
     [class*="mobile only"]:not(.tablet),
     [class*="tablet hidden"],
@@ -33,7 +36,6 @@
 }
 
 /* Computer / Desktop / iPad Landscape */
-
 @media only screen and (min-width: @computerBreakpoint) and (max-width: (@largeMonitorBreakpoint - 1)) {
     [class*="mobile only"]:not(.computer),
     [class*="tablet only"]:not(.computer),
@@ -46,7 +48,6 @@
 }
 
 /* Large Monitor */
-
 @media only screen and (min-width: @largeMonitorBreakpoint) and (max-width: (@widescreenMonitorBreakpoint - 1)) {
     [class*="mobile only"]:not([class*="large screen"]),
     [class*="tablet only"]:not([class*="large screen"]),
@@ -59,7 +60,6 @@
 }
 
 /* Widescreen Monitor */
-
 @media only screen and (min-width: @widescreenMonitorBreakpoint) {
     [class*="mobile only"]:not([class*="widescreen"]),
     [class*="tablet only"]:not([class*="widescreen"]),
