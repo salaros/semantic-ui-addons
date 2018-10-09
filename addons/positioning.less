@@ -1,0 +1,45 @@
+// Text and content alignment
+.ui.aligned {
+    .center {
+        margin: auto
+    }
+    &.text {
+        &.center {
+            text-align: center
+        }
+        &.left {
+            text-align: left
+        }
+        &.right {
+            text-align: right
+        }
+        &.justified {
+            text-align: justify;
+        }
+    }
+}
+
+// Display property controls
+.ui.display {
+    &.none {
+        display: none !important;
+    }
+    &.block {
+        display: block !important;
+    }
+    &.inline.block {
+        display: inline-block !important;
+    }
+    &.flex {
+        display: flex !important;
+    }
+}
+
+// Floating content
+[class*="left floated"] {
+    float: left;
+}
+
+[class*="right floated"] {
+    float: right;
+}
