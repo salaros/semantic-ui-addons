@@ -1,0 +1,35 @@
+.ui.menu.transparent {
+    /* Remove useless border from transparent menues */
+    border: none !important;
+    border-color: transparent !important;
+}
+
+.ui.segment {
+    &.borderless {
+        border: none !important;
+    }
+    &.vertical.stripe {
+        padding: 3em 0;
+        
+        &.very.padded {
+            padding: 8em 0;
+        }
+    }
+}
+
+.ui.cards > .card,
+.ui.card {
+    & > .very.padded.content {
+        /* Allow very padded cards */
+        padding: 2em !important;
+    }
+}
+
+// Full height
+[class*="exactly full height"] {
+    height: 100%;
+}
+
+[class*="full height or greater"] {
+    min-height: 100%;
+}
