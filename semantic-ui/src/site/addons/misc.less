@@ -19,17 +19,21 @@
 
 .ui.cards > .card,
 .ui.card {
-    & > .very.padded.content {
+    &> .very.padded.content {
         /* Allow very padded cards */
         padding: 2em !important;
     }
+
+    &> .borderless.content {
+        border-top: none !important;
+        border-bottom: none !important;
+    }
 }
 
-// Full height
-[class*="exactly full height"] {
-    height: 100%;
-}
+.ui.list.bulletless {
+    margin-left: 0;
 
-[class*="full height or greater"] {
-    min-height: 100%;
+    & > li:before {
+        display: none;
+    }
 }
