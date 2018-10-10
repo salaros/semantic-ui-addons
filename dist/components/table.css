@@ -742,10 +742,10 @@
 
 /* Grey */
 .ui.grey.table {
-  border-top: 0.2em solid #84817A;
+  border-top: 0.2em solid #333336;
 }
 .ui.inverted.grey.table {
-  background-color: #84817A !important;
+  background-color: #333336 !important;
   color: #FFFFFF !important;
 }
 
@@ -1130,3 +1130,9 @@
 .ui.large.table {
   font-size: 1.1em;
 }
+
+
+/*******************************
+         Site Overrides
+*******************************/
+

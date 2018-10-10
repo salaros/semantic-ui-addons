@@ -5,6 +5,13 @@ MKFILE_DIR 	:= $(dir $(MKFILE_PATH))
 
 all: build
 
+clean:
+	@cd $(MKFILE_DIR)
+	@rm -rf dist
+	@rm -rfv semantic-ui/src/theme*
+	@rm -rfv semantic-ui/src/definitions
+	@rm -rfv semantic-ui/src/*.less
+
 install:
 	@npm install --only=dev
 
@@ -16,7 +23,7 @@ build-sui: install-sui
 	@cd $(MKFILE_DIR)/semantic-ui
 	@gulp --gulpfile $(MKFILE_DIR)/semantic-ui/gulpfile.js build
 
-build: build-sui
+build: clean build-sui
 	@cd $(MKFILE_DIR)
 	@gulp css:concat
 

@@ -236,6 +236,12 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   display: -ms-flexbox !important;
   display: flex !important;
 }
+[class*="exactly full height"] {
+  height: 100%;
+}
+[class*="full height or greater"] {
+  min-height: 100%;
+}
 [class*="left floated"] {
   float: left;
 }
@@ -287,7 +293,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   color: #FFFFFF;
 }
 .ui.text.grey {
-  color: #84817A;
+  color: #333336;
 }
 .ui.text.black {
   color: #272727;
@@ -337,11 +343,16 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 /* Allow very padded cards */
   padding: 2em !important;
 }
-[class*="exactly full height"] {
-  height: 100%;
+.ui.cards > .card > .borderless.content,
+.ui.card > .borderless.content {
+  border-top: none !important;
+  border-bottom: none !important;
 }
-[class*="full height or greater"] {
-  min-height: 100%;
+.ui.list.bulletless {
+  margin-left: 0;
+}
+.ui.list.bulletless > li:before {
+  display: none;
 }
 body.pushable > .pusher.flex > .full.height {
   
@@ -372,7 +383,7 @@ body.pushable > .pusher.flex > .full.height > .footer.segment {
           flex: 0 0 auto;
 }
 body.pushable > .pusher.flex > .full.height [class*="exactly full height"] {
-  height: 100%;
+  height: 100vh;
 }
 .ui.cards > .card.column,
 .ui.card.column {

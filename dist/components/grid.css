@@ -1440,7 +1440,7 @@
 .ui.grid > .grey.row,
 .ui.grid > .grey.column,
 .ui.grid > .row > .grey.column {
-  background-color: #84817A !important;
+  background-color: #333336 !important;
   color: #FFFFFF;
 }
 
@@ -2029,5 +2029,11 @@
 
 /*******************************
          Theme Overrides
+*******************************/
+
+
+
+/*******************************
+         Site Overrides
 *******************************/
 

@@ -2,33 +2,10 @@ const gulp = require('gulp'),
       sourcemaps = require('gulp-sourcemaps'),
       rename = require('gulp-rename'),
       cssnano = require('gulp-cssnano'),
-      less = require('gulp-less'),
-      concat = require('gulp-concat'),
-      strip = require('gulp-strip-css-comments'),
-      newLinesFix = require('gulp-remove-empty-lines');
+      concat = require('gulp-concat');
 
 // Default task
-gulp.task('default', [ 'css:concat', 'less:compile' ]);
-
-gulp.task('less:compile', function () {
-    return gulp.src('./addons/!index.less')
-        .pipe(sourcemaps.init())
-        .pipe(less())
-        .pipe(strip())
-        .pipe(newLinesFix())
-        .pipe(rename({
-            basename: "addons",
-        }))
-        .pipe(gulp.dest('./dist/components'))
-        .pipe(cssnano())
-        .pipe(rename({
-            suffix: ".min",
-        }))
-        .pipe(sourcemaps.write("./", {
-            addComment: false
-        }))
-        .pipe(gulp.dest('./dist/components'));
-});
+gulp.task('default', [ 'css:concat' ]);
 
 gulp.task('css:concat', [ 'fonts:copy' ], function () {
     return gulp.src([

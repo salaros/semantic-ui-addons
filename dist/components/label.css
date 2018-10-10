@@ -961,16 +961,16 @@ a.ui.basic.brown.label:hover {
 
 .ui.grey.labels .label,
 .ui.grey.label {
-  background-color: #84817A !important;
-  border-color: #84817A !important;
+  background-color: #333336 !important;
+  border-color: #333336 !important;
   color: #FFFFFF !important;
 }
 
 /* Link */
 .ui.grey.labels .label:hover,
 a.ui.grey.label:hover {
-  background-color: #908e87 !important;
-  border-color: #908e87 !important;
+  background-color: #3f3f43 !important;
+  border-color: #3f3f43 !important;
   color: #FFFFFF !important;
 }
 
@@ -988,14 +988,14 @@ a.ui.grey.label:hover {
 /* Basic */
 .ui.basic.grey.label {
   background: none #FFFFFF !important;
-  color: #84817A !important;
-  border-color: #84817A !important;
+  color: #333336 !important;
+  border-color: #333336 !important;
 }
 .ui.basic.grey.labels a.label:hover,
 a.ui.basic.grey.label:hover {
   background-color: #FFFFFF !important;
-  color: #908e87 !important;
-  border-color: #908e87 !important;
+  color: #3f3f43 !important;
+  border-color: #3f3f43 !important;
 }
 
 /*--- Black ---*/
@@ -1303,5 +1303,11 @@ a.ui.basic.label:hover {
 
 /*******************************
          Theme Overrides
+*******************************/
+
+
+
+/*******************************
+         Site Overrides
 *******************************/
 

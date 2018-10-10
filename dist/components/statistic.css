@@ -372,7 +372,7 @@
 .ui.grey.statistics .statistic > .value,
 .ui.statistics .grey.statistic > .value,
 .ui.grey.statistic > .value {
-  color: #84817A;
+  color: #333336;
 }
 
 /*--------------
@@ -556,5 +556,11 @@
 
 /*******************************
          Theme Overrides
+*******************************/
+
+
+
+/*******************************
+    User Variable Overrides
 *******************************/
 

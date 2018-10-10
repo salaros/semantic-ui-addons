@@ -1,4 +1,6 @@
 fonts/
 node_modules/
 semantic-ui/
+!semantic-ui/src/site/globals
+!semantic-ui/src/site/addons
 package-lock.json

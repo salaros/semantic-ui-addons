@@ -22,7 +22,7 @@
 @purple         : #C44569;
 @pink           : #FF7675;
 @brown          : #B33939;
-@grey           : #84817A;
+@grey           : #333336;
 @black          : #272727;
 
 @primaryColor   : @teal;

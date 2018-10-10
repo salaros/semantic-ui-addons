@@ -1374,8 +1374,8 @@ Floated Menu / Item
 }
 .ui.menu .grey.active.item,
 .ui.grey.menu .active.item {
-  border-color: #84817A !important;
-  color: #84817A !important;
+  border-color: #333336 !important;
+  color: #333336 !important;
 }
 
 /*--------------
@@ -1635,7 +1635,7 @@ Floated Menu / Item
 /* Grey */
 .ui.inverted.menu .grey.active.item,
 .ui.inverted.grey.menu {
-  background-color: #84817A;
+  background-color: #333336;
 }
 .ui.inverted.grey.menu .item:before {
   background-color: rgba(34, 36, 38, 0.1);
@@ -2042,5 +2042,11 @@ Floated Menu / Item
 
 /*******************************
          Theme Overrides
+*******************************/
+
+
+
+/*******************************
+         Site Overrides
 *******************************/
 
